@@ -1,5 +1,5 @@
 <h2>Штуки</h2>
-<p>http://fancyapps.com/ и fontawesome.io/icons/</p>
+<p>http://fancyapps.com/ и http://fontawesome.io/icons/</p>
 <p>Генератор иконок для сайта: http://perfecticons.com/ </p>
 <p>Генератор grid-сетки: http://www.griddy.io/</p>
 <p>Мобильное меню для сайта: http://slicknav.com/</p>
