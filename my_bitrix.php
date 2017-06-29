@@ -71,3 +71,21 @@ if (array_key_exists("showBy", $_REQUEST)) {
 </pre>
 </p>
 
+
+<p>Получает значение Доп. полей раздела.</p>
+<?
+$aSection = CIBlockSection::GetList( array(), array(
+'IBLOCK_ID'         => id инфоблока,
+'ID//CODE'          => тут id/code категории,
+), false, array('UF_KARNIZ_MP', 'UF_PRICE_MIN', 'UF_THREE_STEP') )->Fetch();
+echo $aSection["UF_KARNIZ_MP"];
+?>
+
+<p>Получает список разделов, к которым принадлежит элемент</p>
+<?
+$resSection = CIBlockSection::GetNavChain(false, $arResult['IBLOCK_SECTION_ID']);
+while ($arSection = $resSection->GetNext()) {
+$array_sections = $arSection;
+echo $arSection["NAME"];
+}
+?>
