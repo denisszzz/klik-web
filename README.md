@@ -33,3 +33,4 @@
 <p>Пометка лейблом товаров: https://camouf.ru/blog-note/865/</p>
 <p>Resize картинок: https://camouf.ru/blog-note/833/</p>
 <p>Кууски кода в в файле my_bitrix.php</p>
+<p>При активной галке "Переместить весь Javascript в конец страницы" этот аттрибут "data-skip-moving="true"" заставляет скрипт игнорировать это правило</p>
