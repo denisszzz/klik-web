@@ -11,7 +11,7 @@
 <p>Валидация: https://jqueryvalidation.org/</p>
 <p>Генератор градиентов: http://colinkeany.com/blend/</p>
 <p>overlay меню: https://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/</p>
-<p></p>
+<p>Социокнопки: http://ilyabirman.ru/projects/likely/</p>
 <p></p>
 <p></p>
 <p></p>
