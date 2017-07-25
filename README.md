@@ -34,3 +34,4 @@
 <p>Resize картинок: https://camouf.ru/blog-note/833/</p>
 <p>Кууски кода в в файле my_bitrix.php</p>
 <p>При активной галке "Переместить весь Javascript в конец страницы" этот аттрибут "data-skip-moving="true"" заставляет скрипт игнорировать это правило</p>
+<p>Про корзину и заказы: https://mrcappuccino.ru/blog/post/work-with-basket-bitrix-d7</p>
