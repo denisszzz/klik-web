@@ -12,7 +12,7 @@
 <p>Генератор градиентов: http://colinkeany.com/blend/</p>
 <p>overlay меню: https://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/</p>
 <p>Социокнопки: http://ilyabirman.ru/projects/likely/</p>
-<p></p>
+<p>Адаптивное меню: http://www.roblukedesign.com/trunk/trunk.html</p>
 <p></p>
 <p></p>
 <p></p>
