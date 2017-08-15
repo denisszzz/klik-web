@@ -89,3 +89,15 @@ $array_sections = $arSection;
 echo $arSection["NAME"];
 }
 ?>
+
+<p>Добавляет на страницы пагинации title старница N. Этот код добавить в init.php</p>
+<?
+AddEventHandler("main", "OnEpilog", "OnEpilogHandler");
+function OnEpilogHandler()
+{
+    global $APPLICATION;
+    if (!defined('ERROR_404') && intval($_GET["PAGEN_2"]) > 0) {
+        $APPLICATION->SetPageProperty("title", $APPLICATION->GetPageProperty("title") . " страница " . intval($_GET["PAGEN_2"]) );
+    }
+}
+?>
