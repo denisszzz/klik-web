@@ -37,3 +37,4 @@
 <p>Про корзину и заказы: https://mrcappuccino.ru/blog/post/work-with-basket-bitrix-d7</p>
 <p>API битрикса: http://vbeg.ru/tezam/shpargalka-po-api-bitriksa/</p>
 <p>SEO для битрикса (-страница n на пагинации и тд): https://mrcappuccino.ru/blog/post/seo-optimizaciya-sajta-na-bitriks-chast-1</p>
+<p>Подключение классов, если ошибки: http://coder-diary.ru/bxbugs/</p>
