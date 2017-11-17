@@ -81,6 +81,15 @@ $aSection = CIBlockSection::GetList( array(), array(
 echo $aSection["UF_KARNIZ_MP"];
 ?>
 
+<p>Получает значение Доп. полей раздела. типа список.</p>
+<?
+Cmodule::IncludeModule('iblock');
+$rsEnum = CUserFieldEnum::GetList(array(), array("ID" =>$ID));//$ID - id значения пользовательского поля типа список
+$arEnum = $rsEnum->GetNext();
+echo $arEnum["XML_ID"];
+?>
+
+
 <p>Получает список разделов, к которым принадлежит элемент</p>
 <?
 $resSection = CIBlockSection::GetNavChain(false, $arResult['IBLOCK_SECTION_ID']);
