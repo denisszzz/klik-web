@@ -13,7 +13,7 @@
 <p>overlay меню: https://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/</p>
 <p>Социокнопки: http://ilyabirman.ru/projects/likely/</p>
 <p>Адаптивное меню: http://www.roblukedesign.com/trunk/trunk.html</p>
-<p></p>
+<h3>SQL-запросы к CVS файлу: http://harelba.github.io/q/index.html</h3>
 <p></p>
 <p></p>
 
