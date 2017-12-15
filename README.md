@@ -1,3 +1,5 @@
+<h1>Чистый шаблон https://github.com/awesomebitrix/bitrixclear</h1>
+
 <h2>Штуки</h2>
 <p>http://fancyapps.com/ и http://fontawesome.io/icons/</p>
 <p>Генератор иконок для сайта: http://perfecticons.com/ </p>
