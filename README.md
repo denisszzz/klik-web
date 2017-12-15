@@ -14,7 +14,8 @@
 <p>Социокнопки: http://ilyabirman.ru/projects/likely/</p>
 <p>Адаптивное меню: http://www.roblukedesign.com/trunk/trunk.html</p>
 <p>GRID сетка: https://haltu.github.io/muuri/</p>
-<h3>SQL-запросы к CVS файлу: http://harelba.github.io/q/index.html</h3>
+<p>Стилизация форм CSS https://jonathan-harrell.com/advanced-css-form-styling/</p>
+<p>SQL-запросы к CVS файлу: http://harelba.github.io/q/index.html</p>
 <p></p>
 <p></p>
 
