@@ -16,7 +16,7 @@
 <p>GRID сетка: https://haltu.github.io/muuri/</p>
 <p>Стилизация форм CSS https://jonathan-harrell.com/advanced-css-form-styling/</p>
 <p>SQL-запросы к CVS файлу: http://harelba.github.io/q/index.html</p>
-<p></p>
+<p>SVG-иконки социальных сетей: https://github.com/edent/SuperTinyIcons</p>
 <p></p>
 
 <h2>Чтение, учеба</h2>
