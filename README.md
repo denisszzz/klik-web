@@ -4,7 +4,7 @@
 <p>http://fancyapps.com/ и http://fontawesome.io/icons/</p>
 <p>Генератор иконок для сайта: http://perfecticons.com/ </p>
 <p>Генератор grid-сетки: http://www.griddy.io/</p>
-<p>Мобильное меню для сайта: http://slicknav.com/</p>
+<p>Мобильное меню для сайта: http://slicknav.io/</p>
 <p>Кастомизация google карт: https://snazzymaps.com/editor и https://mapkit.io/</p>
 <p>Генератор css-анимаций: http://waitanimate.wstone.io/</p>
 <p>Сортировка, фильтры и поиск в html документе: http://listjs.com/</p>
