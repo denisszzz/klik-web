@@ -42,3 +42,6 @@
 <p>API битрикса: http://vbeg.ru/tezam/shpargalka-po-api-bitriksa/</p>
 <p>SEO для битрикса (-страница n на пагинации и тд): https://mrcappuccino.ru/blog/post/seo-optimizaciya-sajta-na-bitriks-chast-1</p>
 <p>Подключение классов, если ошибки: http://coder-diary.ru/bxbugs/</p>
+
+<h2>Ну</h2>
+<p>Телеграмм-клиент для ТП и Б24 https://www.itsumma.ru/blog/itstelegram-klient-dlya-chatops-s-integratsiey-v-bitrix24/</p>
