@@ -110,3 +110,14 @@ function OnEpilogHandler()
     }
 }
 ?>
+
+<p>Вывод свойства с "поле для описания значения"</p>
+<?
+<?if (!empty($arItem["PROPERTIES"]["ELEM_PL"]["VALUE"])):?>
+
+<?foreach(array_combine($arResult["DISPLAY_PROPERTIES"]["BLOCK_SOLUTIONS"]["VALUE"], $arResult["DISPLAY_PROPERTIES"]["BLOCK_SOLUTIONS"]["VALUE_XML_ID"]) as $text => $icon) {?>
+<li><p class="icon_portfolio_full <?=$icon?>"></p><p class="text_portfolio_full"><?=$text?></p></li>
+<?}?>
+
+<?endif?>
+?>
