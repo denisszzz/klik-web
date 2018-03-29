@@ -222,3 +222,48 @@ function DoIBlockAfterSave($arg1, $arg2 = false){
 
 }
 ?>
+
+Вот этот еще. Обновление min и max цен
+<?
+AddEventHandler("iblock", "OnAfterIBlockElementUpdate",  Array("MyElement", "OnBeforeIBlockElementUpdateHandler"));
+AddEventHandler("iblock", "OnAfterIBlockElementAdd", Array("MyElement", "OnAfterIBlockElementAddHandler"));
+class MyElement
+{
+function OnBeforeIBlockElementUpdateHandler(&$arFields){
+$intIBlockID = $arFields["IBLOCK_ID"];
+$mxResult = CCatalogSKU::GetInfoByProductIBlock($intIBlockID);
+AddMessage2Log('$dump12 = '.print_r($mxResult, true),'');
+if (is_array($mxResult)) 
+{ 
+
+$rsOffers = CIBlockElement::GetList(array("PRICE"=>"ASC"),array('ACTIVE' => 'Y', 'IBLOCK_ID' => $mxResult['IBLOCK_ID'], 'PROPERTY_'.$mxResult['SKU_PROPERTY_ID'] => $arFields['ID']));
+while ($arOffer = $rsOffers->GetNext()) 
+{
+AddMessage2Log('$dump121 = '.print_r($arOffer, true),'');
+$ar_price = GetCatalogProductPrice($arOffer["ID"], 1); 
+CIBlockElement::SetPropertyValuesEx($arFields['ID'], $intIBlockID, array('MINIMUM_PRICE' => $ar_price["PRICE"]));
+break; 
+} 
+}
+}
+
+function OnAfterIBlockElementAddHandler(&$arFields){
+$intIBlockID = $arFields["IBLOCK_ID"]; 
+$mxResult = CCatalogSKU::GetInfoByProductIBlock( 
+$intIBlockID 
+); 
+if (is_array($mxResult)) 
+{
+
+$rsOffers = CIBlockElement::GetList(array("PRICE"=>"ASC"),array('ACTIVE' => 'Y', 'IBLOCK_ID' => $mxResult['IBLOCK_ID'], 'PROPERTY_'.$mxResult['SKU_PROPERTY_ID'] => $arFields['ID']));
+while ($arOffer = $rsOffers->GetNext()) 
+{ 
+$ar_price = GetCatalogProductPrice($arOffer["ID"], 1); 
+CIBlockElement::SetPropertyValuesEx($arFields['ID'], $intIBlockID, array('MINIMUM_PRICE' => $ar_price["PRICE"]));
+break; 
+} 
+}
+}
+ 
+}
+?>
