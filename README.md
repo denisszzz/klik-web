@@ -1,3 +1,5 @@
+<h1>Читать! https://github.com/SidiGi/bitrix-info/wiki</h1>
+
 <h1>Чистый шаблон https://github.com/awesomebitrix/bitrixclear</h1>
 
 <h2>Штуки</h2>
