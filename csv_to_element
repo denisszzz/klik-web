@@ -1,0 +1,221 @@
+<?php
+function csv_to_array($filename = '', $delimiter = ';')
+{
+    if (! file_exists($filename) || ! is_readable($filename)) return FALSE;
+
+    $header = NULL;
+    $data = array();
+    if (($handle = fopen($filename, 'r')) !== FALSE)
+    {
+        while (($row = fgetcsv($handle, 1000, $delimiter)) !== FALSE)
+        {
+            if (! $header) $header = $row;
+            else $data[] = array_combine($header, $row);
+        }
+        fclose($handle);
+    }
+    return $data;
+}
+
+
+$old_site_inf = csv_to_array('it_tovar_2.csv');
+$old_gallery_inf = csv_to_array('it_gallery.csv');
+$old_props_inf = csv_to_array('it_props.csv');
+
+$count = $_REQUEST['count'];
+
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
+
+if(CModule::IncludeModule("iblock")) {
+    $arSelect = Array("ID", "PROPERTY_CML2_ARTICLE", "PREVIEW_PICTURE");
+    $arFilter = Array("IBLOCK_ID" => 20, "!PROPERTY_CML2_ARTICLE" => false);
+    $res = CIBlockElement::GetList(Array("SORT"=>"DESC"), $arFilter, false, false, $arSelect);
+    while ($ob = $res->GetNextElement()) {
+        $arFields = $ob->GetFields();
+        $elements_site[$arFields["ID"]] = $arFields["PROPERTY_CML2_ARTICLE_VALUE"];
+    }
+}
+
+foreach ($old_gallery_inf as $gallery) {
+    //var_dump($gallery["id_pic"]);
+    $gallery_site[$gallery["page_id"]][]=["VALUE"=>"http://www.gotovimnaogne.ru/assets/files/img/gallery/m51/".$gallery["page_id"]."/".$gallery["tovar_name"].$gallery["id_pic"].".jpg"];
+}
+
+foreach ($old_props_inf as $props) {
+    if ($props["prid"]==24) {
+        $props["prid"]="WEIGHT";
+    }
+    if ($props["prid"]==15) {
+        $props["prid"]="DEL_PROP";
+    }
+    if ($props["prid"]==5) {
+        $props["prid"]="VSP_RESH_SM";
+    }
+    if ($props["prid"]==9) {
+        $props["prid"]="POWER_BTM_GOR";
+    }
+    if ($props["prid"]==4) {
+        $props["prid"]="POVERH_PRIG";
+    }
+    if ($props["prid"]==7) {
+        $props["prid"]="RAZMER_DSHV";
+    }
+    if ($props["prid"]==35) {
+        $props["prid"]="SIDE_GOR";
+    }
+    if ($props["prid"]==14) {
+        $props["prid"]="DEL_PROP";
+    }
+    if ($props["prid"]==33) {
+        $props["prid"]="GUARANTY";
+    }
+    if ($props["prid"]==36) {
+        $props["prid"]="BACK_GOR";
+    }
+    if ($props["prid"]==13) {
+        $props["prid"]="DEL_PROP";
+    }
+    if ($props["prid"]==2) {
+        $props["prid"]="POWER_GRILL";
+    }
+    if ($props["prid"]==26) {
+        $props["prid"]="TYPE";
+    }
+    if ($props["prid"]==37) {
+        $props["prid"]="MATERIAL_BARS";
+    }
+    if ($props["prid"]==10) {
+        $props["prid"]="POWER_SIDE_GOR";
+    }
+    if ($props["prid"]==21) {
+        $props["prid"]="HEIGHT_WO_KRIS";
+    }
+    if ($props["prid"]==20) {
+        $props["prid"]="HEIGHT_KRIS";
+    }
+    if ($props["prid"]==18) {
+        $props["prid"]="NARUZH_DIA";
+    }
+    if ($props["prid"]==17) {
+        $props["prid"]="DEL_PROP";
+    }
+    if ($props["prid"]==22) {
+        $props["prid"]="TOLSH_STENKI";
+    }
+    if ($props["prid"]==30) {
+        $props["prid"]="HEIGHT_SM";
+    }
+    if ($props["prid"]==29) {
+        $props["prid"]="MATERIAL_M";
+    }
+    if ($props["prid"]==28) {
+        $props["prid"]="S_L";
+    }
+    if ($props["prid"]==70) {
+        $props["prid"]="SCOPE";
+    }
+    if ($props["prid"]==27) {
+        $props["prid"]="DIAMETR_SM";
+    }
+    if ($props["prid"]==62) {
+        $props["prid"]="TYPE_ACS";
+    }
+    if ($props["prid"]==57) {
+        $props["prid"]="DIA_DIM";
+    }
+    if ($props["prid"]==46) {
+        $props["prid"]="ZOLNIK";
+    }
+    if ($props["prid"]==45) {
+        $props["prid"]="TOLCH_STALI";
+    }
+    if ($props["prid"]==3) {
+        $props["prid"]="OBCH_S_PRIG";
+    }
+    if ($props["prid"]==65) {
+        $props["prid"]="TYPE_GRIL";
+    }
+    if ($props["prid"]==25) {
+        $props["prid"]="DIAMETR_BARS";
+    }
+    if ($props["prid"]==31) {
+        $props["prid"]="DEL_PROP";
+    }
+    if ($props["prid"]==23) {
+        $props["prid"]="DLIN_SHAM";
+    }
+    if ($props["prid"]==16) {
+        $props["prid"]="DEL_PROP";
+    }
+    if ($props["prid"]==12) {
+        $props["prid"]="PROIZVOD";
+    }
+    if ($props["prid"]==40) {
+        $props["prid"]="DEL_PROP";
+    }
+    if ($props["prid"]==63) {
+        $props["prid"]="DEL_PROP";
+    }
+    if ($props["prid"]==61) {
+        $props["prid"]="BRAND";
+        $arSelect = Array("ID", "NAME");
+        $arFilter = Array("IBLOCK_ID" => 15, "NAME" => $props["value_prop"]);
+        $res = CIBlockElement::GetList(Array("SORT"=>"DESC"), $arFilter, false, false, $arSelect);
+        while ($arFields = $res->GetNext()) {
+            $id_brand=$arFields["ID"];
+        }
+        $props["value_prop"]=$id_brand;
+    }
+        if ($props["type"]=="2"){
+            $props["value"]=$props["value_prop"];
+        }
+        if ($props["prid"]!="DEL_PROP") {
+            $props_old[$props["tid"]][$props["prid"]] = $props["value"];
+        }
+}
+
+//var_dump($props_old[1208]);
+foreach ($old_site_inf as $elements) {
+    if ($elements['article']!="") {
+        $key = array_search($elements['article'], $elements_site);
+        if ($key != "") {
+            $id_element = $elements['id'];
+            $name_element = $elements['zagolovok'];
+            $podpis_element = $elements['podpis'];
+            $detail_text = $elements['small_promo']."<br><br>".$elements['content']."<br><br>".$elements['complect'];
+            $detail_pic = "http://www.gotovimnaogne.ru/files/img/cat_elements/".$elements['image'];
+            $pic_min = explode('.', $elements['image']);
+            $prev_pic = "http://www.gotovimnaogne.ru/files/img/cat_elements/".$pic_min[0]."_sm.".$pic_min[1];
+
+
+
+            $el = new CIBlockElement;
+
+            $arLoadProductArray = Array(
+                "MODIFIED_BY"    => $USER->GetID(),
+//                "NAME"           => $name_element,
+//                "PREVIEW_TEXT"   => $podpis_element,
+//                "DETAIL_TEXT"    => $detail_text,
+//                "DETAIL_TEXT_TYPE" => 'html',
+//                "DETAIL_PICTURE" => CFile::MakeFileArray($detail_pic),
+                "PREVIEW_PICTURE" => CFile::MakeFileArray($prev_pic)
+            );
+
+            $PRODUCT_ID = $key;
+            //var_dump($prev_pic);
+            $res = $el->Update($PRODUCT_ID, $arLoadProductArray, false, false, true);
+            if ($gallery_site[$id_element]) {
+                //CIBlockElement::SetPropertyValuesEx($PRODUCT_ID, 20, ['files' => $gallery_site[$id_element]]);
+            }
+            if ($props_old[$id_element]) {
+                //CIBlockElement::SetPropertyValuesEx($PRODUCT_ID, 20, $props_old[$id_element]);
+            }
+
+        }
+    }
+}
+
+
+
+
+?>
