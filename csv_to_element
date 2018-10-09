@@ -38,7 +38,7 @@ if(CModule::IncludeModule("iblock")) {
 
 foreach ($old_gallery_inf as $gallery) {
     //var_dump($gallery["id_pic"]);
-    $gallery_site[$gallery["page_id"]][]=["VALUE"=>"http://www.gotovimnaogne.ru/assets/files/img/gallery/m51/".$gallery["page_id"]."/".$gallery["tovar_name"].$gallery["id_pic"].".jpg"];
+    $gallery_site[$gallery["page_id"]][]=["VALUE"=>"/assets/files/img/gallery/m51/".$gallery["page_id"]."/".$gallery["tovar_name"].$gallery["id_pic"].".jpg"];
 }
 
 foreach ($old_props_inf as $props) {
@@ -183,9 +183,9 @@ foreach ($old_site_inf as $elements) {
             $name_element = $elements['zagolovok'];
             $podpis_element = $elements['podpis'];
             $detail_text = $elements['small_promo']."<br><br>".$elements['content']."<br><br>".$elements['complect'];
-            $detail_pic = "http://www.gotovimnaogne.ru/files/img/cat_elements/".$elements['image'];
+            $detail_pic = "/files/img/cat_elements/".$elements['image'];
             $pic_min = explode('.', $elements['image']);
-            $prev_pic = "http://www.gotovimnaogne.ru/files/img/cat_elements/".$pic_min[0]."_sm.".$pic_min[1];
+            $prev_pic = "/files/img/cat_elements/".$pic_min[0]."_sm.".$pic_min[1];
 
 
 
