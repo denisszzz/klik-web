@@ -23,7 +23,7 @@
 <p>Стилизация форм CSS https://jonathan-harrell.com/advanced-css-form-styling/</p>
 <p>SQL-запросы к CVS файлу: http://harelba.github.io/q/index.html</p>
 <p>SVG-иконки социальных сетей: https://github.com/edent/SuperTinyIcons</p>
-<p></p>
+<p>Кстомизация таблицы товаров заказа в админке: https://www.olegpro.ru/post/1s_bitriks_modificirovanie_tablicy_tovarov_v_forme_zakaza_v_adminke.html</p>
 
 <h2>Чтение, учеба</h2>
 <p>Пополняемые переводы, тексты и тд для всех: https://github.com/melnik909/frontend-whitelist</p>
