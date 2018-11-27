@@ -49,6 +49,7 @@
 <p>Добавление полей в заказе в АДМИНКИ битрикса: http://postoev.ru/blog/how-to-edit-the-order</p>
 <p>Фильтр по всем товарам в /catalog/: http://postoev.ru/blog/filter-by-all-items-in-catalog-component</p>
 <p>ajax обновление стомости при обновлении кол-ва в корзине: https://ipolh.com/development/ajax-korzina/</p>
+<p>Дополнительные поля в уведомлении о заказе (email): https://marketplace.1c-bitrix.ru/solutions/ipol.mailorder/</p>
 
 <h2>Ну</h2>
 <p>Телеграмм-клиент для ТП и Б24 https://www.itsumma.ru/blog/itstelegram-klient-dlya-chatops-s-integratsiey-v-bitrix24/</p>
