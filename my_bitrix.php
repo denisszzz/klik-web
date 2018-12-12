@@ -121,3 +121,14 @@ function OnEpilogHandler()
 
 <?endif?>
 ?>
+
+<p>Класс к пункту меню</p>
+<?
+Array(
+		"Акции", 
+		"/sale/", 
+		Array(), 
+		Array("CLASS"=>"icon sale_icon"), 
+		"" 
+	),
+?>
