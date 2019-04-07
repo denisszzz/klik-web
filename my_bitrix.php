@@ -132,3 +132,24 @@ Array(
 		"" 
 	),
 ?>
+
+<p>Перебор массива кромен некоторых</p>
+<?
+if($arResult["DISPLAY_PROPERTIES"]){
+                foreach($arResult["DISPLAY_PROPERTIES"] as $arProp){
+                    if(!in_array($arProp["CODE"], array("SERVICES", "BRAND", "HIT", "RECOMMEND", "NEW", "STOCK", "VIDEO", "VIDEO_YOUTUBE", "CML2_ARTICLE"))){
+                        if(!is_array($arProp["DISPLAY_VALUE"])){
+                            $arProp["DISPLAY_VALUE"] = array($arProp["DISPLAY_VALUE"]);
+                        }
+                        if(is_array($arProp["DISPLAY_VALUE"])){
+                            foreach($arProp["DISPLAY_VALUE"] as $value){
+                                if(strlen($value)){
+                                    $showProps = true;
+                                    break 2;
+                                }
+                            }
+                        }
+                    }
+                }
+
+?>
