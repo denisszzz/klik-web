@@ -1,6 +1,7 @@
 <h2>Читать!</h2>
 <p>https://github.com/SidiGi/bitrix-info/wiki</p>
 <p>https://github.com/Londeren/Bitrix/blob/master/bookmarks.md</p>
+<p>https://github.com/SidiGi/bitrix-info/wiki</p>
 
 <h1>Чистый шаблон https://github.com/awesomebitrix/bitrixclear</h1>
 
